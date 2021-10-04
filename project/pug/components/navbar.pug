@@ -1,0 +1,49 @@
+mixin customNavbar
+    section(class='navbar')
+        div(class='mainNavbar p-t-2')
+            .container
+                div(class='left')
+                    a(href='#')
+                        img(src='./assets/img/favicon.png')
+                    ul(class='links' style='margin-left: 30px;')
+                        li(class='active' id='home') home <i class='bx bxs-down-arrow'></i>
+                            
+                            div(class='menu-close b-radius-sm' id='homeCollapse')
+                                a(href='index.html' class='activeHome') homepage1
+                                a(href='#') homepage2
+                        li
+                            a(href='#') About
+                        li 
+                            a(href='#') Bolg
+                        li  
+                            a(href='#') what's news
+                        li  
+                            a(href='#') contact
+                div(class='right')
+                    button(class='b-radius-lg p-t-1 p-b-1 p-l-2 p-r-2 f-md') Download now
+        div(class='navbarCollapse bg-1 p-t-1')
+            .container
+                div(class='left')
+                    a(href='#')
+                        img(src='./assets/img/favicon.png')
+                    ul(class='links' id='list')
+                        li(class='active' id='home2') home <i class='bx bxs-down-arrow'></i>
+                            div(class='menu-close b-radius-sm' id='homeCollapse2')
+                                a(href='index.html' class='activeHome') homepage1
+                                a(href='#') homepage2
+                        li
+                            a(href='#') About
+                        li 
+                            a(href='#') Bolg
+                        li  
+                            a(href='#') what's news
+                        li  
+                            a(href='#') contact
+                        li
+                            button(class='b-radius-lg p-t-1 p-b-1 p-l-2 p-r-2 f-md') Download now
+                div(class='right b-radius-sm')
+                    <i class='bx bx-list-ul f-xxl'  id='showList'></i>
+                    
+
+
+                

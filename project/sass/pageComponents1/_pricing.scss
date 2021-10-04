@@ -1,0 +1,90 @@
+.pricing{
+    background-image: url('../img/pattern_2.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #6b6872; 
+    .content{
+        p{
+            width: 80%;
+            color: #333;
+            line-height: 1.5;
+        }
+        button{
+            background: linear-gradient(45deg, #3D58F3, #9548F9);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 5px 10px;
+            padding-right: 20px;
+            i{
+                background-color: rgba(255, 255, 255, 0.2);
+                padding: 10px;
+                border-radius: 50%;
+                margin-right: 6px;
+            }
+        }
+    }
+    .img-pricing1{
+        box-shadow: 1px 1px 7px rgba(0,0,0,0.6);
+        background-image: url('../img/pricing_pattern.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include xs{
+            transform: none;
+        }
+        @include lg{
+            transform: translateY(-50px);
+        }
+        .h21{
+            color: #000
+        }
+        .h22{
+            color:#602FDA
+        }
+        p{
+            color: #000;
+            i{
+                background-color: rgba(96, 47, 218, 0.16);
+                padding: 5px;
+                border-radius: 50%;
+                color: rgb(156, 105, 247);
+                margin-right: 5px;
+            }
+        }
+        button{
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            background-color: #242129;
+            box-shadow: 0 4px 12px rgba(56, 51, 64, 0.3);
+        }
+    }
+
+    .img-pricing2{
+        box-shadow: 1px 1px 7px rgba(0,0,0,0.6);
+        background-image: url('../img/pricing_pattern_grayscale.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #6b6872;
+        p{
+            i{
+                background-color: #e5e4e7;
+                padding: 5px;
+                border-radius: 50%;
+                margin-right: 5px;
+            }
+        }
+        button{
+            border: none;
+            background-color: #383340;
+            color: #fff;
+            cursor: pointer;
+            transition: $transition;
+            &:hover{
+                background-color: #242129;
+                box-shadow: 0 4px 12px rgba(56, 51, 64, 0.3);
+            }
+        }
+    }
+}

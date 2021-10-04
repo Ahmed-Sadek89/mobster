@@ -1,0 +1,54 @@
+footer{
+    background-color: #383340;
+    color: #fff;
+    .content{
+        display: flex;
+        flex-direction: column;
+        line-height: 2;
+        a{
+            color: #B2B4BF;
+            &:hover{
+                color: #526bf5
+            }
+        }
+    }
+    .subscribe{
+        line-height: 2;
+        p{
+            color: #B2B4BF;
+            line-height: normal !important;
+        }
+        form{
+            display: flex;
+            flex-direction: row;
+            input{
+                outline: none;
+                border: 1px solid #ced4da;
+                &:focus{
+                    color: #495057;
+                    box-shadow: 1px 1px 5px #3D58F3;
+                }
+            }
+            button{
+                color: #ffffff;
+                background-color: #3D58F3;
+                border: none;
+                cursor: pointer;
+                padding: 10px;
+                font-size: 37px;
+            }
+        }
+        .content2{
+            display: flex;
+            flex-direction: row;
+            a{
+                background-color: #3d58f3;
+                color: #fff;
+                padding: 1px 10px;
+                border-radius: 50%;
+                font-size: 25px;
+                margin-right: 5px;
+            }
+        }
+    }
+}

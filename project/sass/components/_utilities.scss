@@ -1,0 +1,182 @@
+@use 'sass:math';
+$utilities: (
+    "display":(
+        "prefix": "d",
+        "values": (
+            "none": none,
+            "block": block
+        )
+    ),
+    "font-size": (
+        "prefix": "f",
+        "values": (
+            "sm": $font-size-sm,
+            "md": $font-size,
+            "lg": $font-size-lg,
+            "xl": $font-size-xl,
+            "xxl": $font-size-xxl
+        )
+    ),
+    "font-weight": (
+        "prefix": "f",
+        "values": (
+            "light": lighter,
+            "regular": normal,
+            "bold": bolder
+        )
+    ),
+    "text-align":(
+        "prefix": "text",
+        "values": (
+            "left": left,
+            "center": center,
+            "right": right
+        )
+    ),
+    "color": (
+        "prefix": "color",
+        "values": (
+            "1": $color1,
+            "2": $color2
+        )
+    ),
+    "background-color": (
+        "prefix": "bg",
+        "values": (
+            "1": $bg1,
+            "2": $bg2
+        )
+    ),
+    "border-radius": (
+        "prefix": "b-radius",
+        "values": (
+            "sm": math.div($border-radius, 2),
+            "none": 0px,
+            "md": $border-radius,
+            "lg": $border-radius * 2,
+            "xl": $border-radius * 3,
+            "full": 50%
+        )
+    ),
+    "padding-top": (
+        "prefix": "p-t",
+        "values": (
+            "0": 0px,
+            "1": $padding,
+            "2": $padding * 2,
+            "3": $padding * 4,
+            "4": $padding * 6,
+            "5": $padding * 8
+        )
+    ),
+    "padding-bottom": (
+        "prefix": "p-b",
+        "values": (
+            "0": 0px,
+            "1": $padding,
+            "2": $padding * 2,
+            "3": $padding * 4,
+            "4": $padding * 6,
+            "5": $padding * 8
+        )
+    ),
+    "padding-left": (
+        "prefix": "p-l",
+        "values": (
+            "0": 0px,
+            "1": $padding,
+            "2": $padding * 2,
+            "3": $padding * 4,
+            "4": $padding * 6,
+            "5": $padding * 8
+        )
+    ),
+    "padding-right": (
+        "prefix": "p-r",
+        "values": (
+            "0": 0px,
+            "1": $padding,
+            "2": $padding * 2,
+            "3": $padding * 4,
+            "4": $padding * 6,
+            "5": $padding * 8
+        )
+    ),
+    "padding": (
+        "prefix": "p",
+        "values": (
+            "0": 0px,
+            "1": $padding,
+            "2": $padding * 2,
+            "3": $padding * 4,
+            "4": $padding * 6,
+            "5": $padding * 8
+        )
+    ),
+    "margin-top": (
+        "prefix": "m-t",
+        "values": (
+            "0": 0px,
+            "1": $margin,
+            "2": $margin * 2,
+            "3": $margin * 4,
+            "4": $margin * 6,
+            "5": $margin * 8
+        )
+    ),
+    "margin-bottom": (
+        "prefix": "m-b",
+        "values": (
+            "0": 0px,
+            "1": $margin,
+            "2": $margin * 2,
+            "3": $margin * 4,
+            "4": $margin * 6,
+            "5": $margin * 8
+        )
+    ),
+    "margin-left": (
+        "prefix": "m-l",
+        "values": (
+            "0": 0px,
+            "1": $margin,
+            "2": $margin * 2,
+            "3": $margin * 4,
+            "4": $margin * 6,
+            "5": $margin * 8
+        )
+    ),
+    "margin-right": (
+        "prefix": "m-r",
+        "values": (
+            "0": 0px,
+            "1": $margin,
+            "2": $margin * 2,
+            "3": $margin * 4,
+            "4": $margin * 6,
+            "5": $margin * 8
+        )
+    ),
+    "margin": (
+        "prefix": "m",
+        "values": (
+            "0": 0px,
+            "1": $margin,
+            "2": $margin * 2,
+            "3": $margin * 4,
+            "4": $margin * 6,
+            "5": $margin * 8
+        )
+    ),
+);
+
+@each $props, $map in $utilities{
+    $prefix: map-get($map, "prefix");
+    $values: map-get($map, "values");
+
+    @each $key, $value in $values{
+        .#{$prefix}-#{$key}{
+            #{$props}: $value
+        }
+    }
+}

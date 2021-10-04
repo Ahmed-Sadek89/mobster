@@ -1,0 +1,30 @@
+doctype html
+html(lang='en')
+    head
+        include ./components/headers.pug
+        link(
+        rel='stylesheet'
+        href='assets/css/page1.css'
+        )
+        title Mobster 
+    body
+        include ./components/navbar.pug
+        +customNavbar
+        include ./components/info.pug
+        +home1Info
+        include ./components/clients.pug
+        +clients
+        include ./components/about.pug
+        +about
+        include ./components/testimonials.pug
+        +testimonials
+        include ./components/pricing.pug
+        +pricing
+        include ./components/customerStories.pug
+        +customerStories
+        include ./components/contact.pug
+        +contact
+        include ./components/footer.pug
+        +footer
+
+        include ./components/scripts.pug

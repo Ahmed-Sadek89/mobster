@@ -1,0 +1,46 @@
+.info{
+    background-image: url('../img/bg_hero_1.svg');
+    background-repeat: no-repeat;
+    background-position:center ;
+    background-size: cover;
+    color: #383340;
+    
+    .p1{
+        i{
+            color: #fff;
+            background-color: #9548f9;
+            border-radius: 20px;
+            padding: 3px;
+            padding-bottom: 4px;
+        }
+    }
+    .p2{
+        line-height: 1.5;
+    }
+    button{
+        background-color: #3D58F3;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: $transition;
+        &:hover{
+            background-color: #1737f1;
+            box-shadow: 0 4px 12px rgba(61, 88, 243, 0.3);
+        }
+    }
+    .img-content{
+        width: 100%;
+        height: 55vh;
+        overflow: hidden;
+        @include xs{
+            display: none;
+        }
+        @include lg{
+            display: flex;
+            justify-content: center;
+        }
+        img{
+            max-height: 55vh;
+        }
+    }
+}

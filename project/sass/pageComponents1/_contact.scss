@@ -1,0 +1,28 @@
+.contact{
+    .right{
+        display: flex;
+        flex-direction: column;
+        color: #6b6872;
+        form{
+            .input-control{
+                display: flex;
+                flex-direction: column;
+                input, textarea{
+                    outline: none;
+                    border: 1px solid #ced4da;
+                    &:focus{
+                        color: #495057;
+                        box-shadow: 1px 1px 5px #3D58F3;
+                    }
+                }
+            }
+            input[type="submit"]{
+                color: #ffffff;
+                background-color: #3D58F3;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+    
+}

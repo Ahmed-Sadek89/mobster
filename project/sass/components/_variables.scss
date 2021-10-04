@@ -1,0 +1,36 @@
+// main colors
+$color1: #6b6872;
+$color2: #fff;
+// main backgrounds
+$bg1: #fff;
+$bg2: #6b6872;
+
+// margin & padding
+$padding: 0.75rem;
+$margin: 0.75rem;
+
+// font-size
+$font-size: 1rem;
+$font-size-sm: $font-size * 0.75;
+$font-size-lg: $font-size * 1.5;
+$font-size-xl: $font-size * 2;
+$font-size-xxl: $font-size * 3;
+
+// font-weight
+$f-light: lighter;
+$f-regular: normal;
+$f-bold: bolder;
+
+// display
+$d-none: none;
+$d-block: block;
+
+// borders
+$border-thickness: 1px;
+$border-radius: 20px;
+
+// boxes
+$box-sizing: border-box;
+
+// transitions
+$transition: all 0.5s ease;

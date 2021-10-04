@@ -1,0 +1,156 @@
+.navbar{
+    position: absolute;
+    width: 100%;
+    @include xs{
+        box-shadow: 0 1px 3px #383340;
+    }
+    @include lg{
+        box-shadow: none;
+    }
+    .mainNavbar ,.mainNavbar > .container{
+        justify-content: space-between;
+        line-height: 3;
+        @include xs{
+            display: none;
+        }
+        @include lg{
+            display: flex;
+        }
+        .left{
+            display: flex;
+            img{
+                width:50px;
+                height: 50px;
+            }
+            .links{
+                display: flex;
+                position: relative;
+                li{
+                    margin: 0px 15px;
+                    color: rgba(0,0,0,0.5);
+                    transition: $transition;
+                    &:hover{
+                        color: rgba(0,0,0,0.9);
+                    }
+                    a{
+                        color: inherit;
+                        cursor: pointer;
+                    }
+                    .menu-close{
+                        border: $border-thickness solid $bg2;
+                        position: absolute;
+                        padding: 10px 0px;
+                        overflow: hidden;
+                        display: none;
+                        background-color: $bg1;
+                        text-align: center;
+                        a{
+                            cursor: pointer;
+                            color: $color1;
+                            background-color: #f8f9fa;
+                            margin:0px !important;
+                            padding:0px 20px;
+                        }
+                    }
+                    .menu-open{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .activeHome{
+                        background-color: #007bff !important;
+                        margin:0px !important;
+                        color: $color2 !important
+                    }
+                }
+                .active{
+                    color: rgb(0,0,0) !important;
+                    cursor: pointer;
+                }
+            }
+        }
+        .right{
+            button{
+                background-color: #383340;
+                color: $color2;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+    .navbarCollapse, .navbarCollapse > .container{
+        justify-content: space-between;
+        @include xs{
+            display: flex;
+            line-height: 3;
+        }
+        @include lg{
+            display: none;
+            line-height: 0;
+        }
+        .left{
+            display: flex;
+            flex-direction: column;
+            
+            img{
+                width:50px;
+                height: 50px;
+            }
+            .links{
+                display: none;
+                li{
+                    color: rgba(0,0,0,0.5);
+                    transition: $transition;
+                    &:hover{
+                        color: rgba(0,0,0,0.9);
+                    }
+                    a{
+                        color: inherit;
+                        cursor: pointer;
+                    }
+                    .menu-close{
+                        border: $border-thickness solid #ddd;
+                        padding: 10px 0px;
+                        overflow: hidden;
+                        display: none;
+                        text-align: center;
+                        a{
+                            cursor: pointer;
+                            color: $color1;
+                            background-color: #f8f9fa;
+                            margin:0px !important;
+                            padding:0px 20px;
+                        }
+                    }
+                    .menu-open{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .activeHome{
+                        background-color: #007bff !important;
+                        margin:0px !important;
+                        color: $color2 !important
+                    }
+                }
+                .active{
+                    color: rgb(0,0,0) !important;
+                    cursor: pointer;
+                }
+            }
+            .links-open{
+                display: block;
+            }
+            button{
+                background-color: #383340;
+                color: $color2;
+                border: none;
+                cursor: pointer;
+                margin-bottom: 20px;
+            }
+        }
+        .right{
+            cursor: pointer;
+            border: $border-thickness solid #ddd;
+            height: 50px;
+        }
+    }
+}
