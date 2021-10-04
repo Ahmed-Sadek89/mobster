@@ -8,7 +8,7 @@ task('sass', () => {
     return src('project/sass/**/*.scss') 
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(prefix('last 1 versions'))
-        .pipe(purgecss({content: ['*.html']}))
+        .pipe(purgecss({content: ['*.html', 'assets/javaScript/*.js']}))
         .pipe(dest('assets/css'));
 });
 
@@ -20,7 +20,7 @@ task('pug', () => {
 
 
 task('watch', () => {
-    watch(['project/sass/**/*.scss', '*.html'], series('sass'));
+    watch(['project/sass/**/*.scss', '*.html', 'assets/javaScript/*.js'], series('sass'));
     watch('project/pug/**/*.pug', series('pug'));
 });
 

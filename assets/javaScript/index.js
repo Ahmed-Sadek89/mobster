@@ -5,6 +5,6 @@ import customEvents from './customEvents.js'
 const allEvents = new customEvents();
 const {homeCollapseToggle, itemsCollapseToggle} = allEvents;
 
-homeCollapseToggle(homeLink, homeCollapse, 'menu-open');
-homeCollapseToggle(homeLink2, homeCollapse2, 'menu-open');
+homeCollapseToggle(homeLink, homeCollapse);
+homeCollapseToggle(homeLink2, homeCollapse2);
 itemsCollapseToggle(showList, list)
